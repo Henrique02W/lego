@@ -1,0 +1,17 @@
+{
+  "name": "brick-rebuild",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site pessoal: procura conjuntos de blocos de montar, lista as peças, separa o que dá para imprimir em 3D do que é melhor comprar e gera STL por peça.",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "import:rebrickable": "node --disable-warning=ExperimentalWarning scripts/import-rebrickable.mjs",
+    "import:ldraw": "node scripts/import-ldraw.mjs",
+    "start": "node --disable-warning=ExperimentalWarning src/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test \"test/**/*.test.js\""
+  },
+  "dependencies": {
+    "fflate": "^0.8.2"
+  }
+}
